@@ -6,6 +6,7 @@ class StudentsViewSet(viewsets.ModelViewSet):
     """Showing Every Students"""
     queryset = Student.objects.all()
     serializer_class = StudentSerializer
+    http_method_names = ['get', 'post', 'head']
 
 class CoursesViewSet(viewsets.ModelViewSet):
     """Showing Every Courses"""
